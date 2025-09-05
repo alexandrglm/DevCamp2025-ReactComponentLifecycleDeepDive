@@ -1,6 +1,7 @@
 // Guide 07 React Components' Lifecycle
 
-// Ejercicio Extendido 2, Demostrar memory leak
+// Ejercicio Extendido 2, Demostrar memory leak hecho
+// Ejercicio 2.2 -> Arreglar el bug
 
 import React, { Component } from "react";
 
@@ -20,9 +21,10 @@ export default class Discussion extends Component {
     }
 
     // PROBLEMA:  Memory Leak
+    // SOLUCION PARTE 1-> GUARDAR referencia del Interval
     componentDidMount() {
 
-        setInterval( () => {
+       this.liveTime = setInterval( () => {
 
             console.log('[EXERCISE 2] New Chat Message');
             this.setState( {
@@ -34,6 +36,17 @@ export default class Discussion extends Component {
 
     }
 
+    // SOLUCION PARTE 2 -> CLEANUP al desmontar
+    componentWillUnmount() {
+
+        clearInterval(this.liveTime);        
+        console.log('[EXERCISE 2 FIXES] Cleaned up Timer, No Memory Leaks!')
+
+    }
+    componentDidUpdate() {
+        console.log('[EXERCISE 2 FIXES] componentDidUpdate()  - Timer triggered!')
+
+    }
 
 
     render() {
