@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 
 // Importaciones custom, recuerda --> NO SON CHILD
 import Navigation from './navigation';
-import pageContent from './page-content';
 import PageContent from './page-content';
 
 export default class App extends Component {

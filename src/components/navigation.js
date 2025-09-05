@@ -28,6 +28,12 @@ export default function(){
                 </NavLink>
             </div>
 
+            <div>
+                <NavLink to="/advanced">
+                    Advanced
+                </NavLink>
+            </div>
+
         </div>
 
     );

@@ -7,6 +7,8 @@ import Discussion from "./discussions";
 import Rules from "./rules";
 import Workflow from "./workflow";
 
+// EJERCICIO AVANZADO Discussion-Advanbced
+import DiscussionAdvanced, { DiscussionList, DiscussionMessage } from './components-avanzado'
 
 export default function() {
 
@@ -19,7 +21,9 @@ export default function() {
                 <Route exact path="/" component={Discussion} />
                 <Route exact path="/rules" component={Rules} />
                 <Route exact path="/workflow" component={Workflow} />
-
+                
+                {/* NUEVA RUTA PARA EL EJERCICIO AVANZADO */}
+                <Route exact path="/advanced" component={DiscussionAdvanced} />
             </Switch>
 
         </div>
