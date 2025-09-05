@@ -52,6 +52,15 @@ export default class Discussion extends Component {
     render() {
 
         // (des)estructuramos los objetos
+        /*
+            en vez de hacer un return con todo linea a linea
+            tipo:
+
+                <h1>{this.state.pageTitle}</h1>
+                <div>{this.state.currentTime}</div>
+
+            Directamente asignamos constante a this.state, y las usamos de manera limpia
+        */
         const { pageTitle, currentTime } = this.state
 
 
