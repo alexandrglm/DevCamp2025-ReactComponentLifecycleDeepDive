@@ -34,6 +34,12 @@ export default function(){
                 </NavLink>
             </div>
 
+            <div>
+                <NavLink to="/optimised">
+                    Optimised
+                </NavLink>
+            </div>
+
         </div>
 
     );
